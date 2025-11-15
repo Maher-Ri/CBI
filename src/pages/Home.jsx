@@ -1,0 +1,72 @@
+import React, { useEffect } from "react";
+import Hero from "../components/home/Hero";
+
+export default function Home() {
+    useEffect(() => {
+        document.title = "Home • CBI Project";
+    }, []);
+
+    return (
+        <div className="home-page font-sans text-gray-900 leading-relaxed bg-mainBlue">
+            <header className="py-5 px-4 border-b border-gray-200">
+                <div className="max-w-[1100px] mx-auto flex items-center justify-between">
+                    <h1 className="m-0 text-lg">CBI Project</h1>
+                    <nav>
+                        <a href="#features" className="mr-3 text-blue-600 hover:underline">
+                            Features
+                        </a>
+                        <a href="#contact" className="text-blue-600 hover:underline">
+                            Contact
+                        </a>
+                    </nav>
+                </div>
+            </header>
+<Hero />
+            <main className="max-w-[1100px] mx-auto my-8 px-4">
+                <section className="flex flex-col gap-5">
+                    <div className="p-8 bg-gradient-to-r from-slate-50 to-white rounded-lg">
+                        <h2 className="m-0 mb-2 text-2xl">Welcome to the CBI Project</h2>
+                        <p className="m-0 text-gray-700">
+                            A simple starting page for your React app. Replace this content with your project's home
+                            content.
+                        </p>
+                        <div className="mt-4">
+                            <a
+                                href="#features"
+                                className="inline-block px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                            >
+                                Learn more
+                            </a>
+                        </div>
+                    </div>
+
+                    <section
+                        id="features"
+                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"
+                    >
+                        <article className="p-4 border border-gray-100 rounded-md">
+                            <h3 className="mt-0 mb-2">Easy to Customize</h3>
+                            <p className="m-0">Swap components, add routes, and adjust styles to fit your needs.</p>
+                        </article>
+
+                        <article className="p-4 border border-gray-100 rounded-md">
+                            <h3 className="mt-0 mb-2">Lightweight</h3>
+                            <p className="m-0">Small, focused component that serves as a clean starting point.</p>
+                        </article>
+
+                        <article className="p-4 border border-gray-100 rounded-md">
+                            <h3 className="mt-0 mb-2">Accessible</h3>
+                            <p className="m-0">Semantic HTML and straightforward structure make accessibility easier.</p>
+                        </article>
+                    </section>
+                </section>
+            </main>
+
+            <footer id="contact" className="border-t border-gray-200 py-4 text-center text-sm">
+                <div className="max-w-[1100px] mx-auto">
+                    <p className="m-0">© {new Date().getFullYear()} CBI Project</p>
+                </div>
+            </footer>
+        </div>
+    );
+}

@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import Hero from "../components/home/Hero";
+import Services from "../components/home/Services";
+import SwiperSection from "../components/home/Swiper";
 
 export default function Home() {
     useEffect(() => {
@@ -8,20 +10,10 @@ export default function Home() {
 
     return (
         <div className="home-page font-sans text-gray-900 leading-relaxed bg-mainBlue">
-            <header className="py-5 px-4 border-b border-gray-200">
-                <div className="max-w-[1100px] mx-auto flex items-center justify-between">
-                    <h1 className="m-0 text-lg">CBI Project</h1>
-                    <nav>
-                        <a href="#features" className="mr-3 text-blue-600 hover:underline">
-                            Features
-                        </a>
-                        <a href="#contact" className="text-blue-600 hover:underline">
-                            Contact
-                        </a>
-                    </nav>
-                </div>
-            </header>
+
 <Hero />
+<Services />
+<SwiperSection />
             <main className="max-w-[1100px] mx-auto my-8 px-4">
                 <section className="flex flex-col gap-5">
                     <div className="p-8 bg-gradient-to-r from-slate-50 to-white rounded-lg">

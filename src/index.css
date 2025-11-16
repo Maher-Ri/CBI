@@ -26,3 +26,13 @@ code {
 .btn-primary {
 background-color: ;
 }
+        /* <SwiperSlide>
+          <div className="relative w-full h-full">
+            <img src={img} alt="Slide" className="w-full h-full object-cover" />
+
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-mainBlue">
+              <h2 className="text-3xl font-bold">Heading</h2>
+              <p className="text-lg">Description</p>
+            </div>
+          </div>
+        </SwiperSlide> */

@@ -50,7 +50,7 @@ export default function Services() {
 
                             {/* title absolute */}
                             <div className="absolute bottom-12 left-8 z-10">
-                                <h3 className="text-mainBlue font-bold	text-start text-3xl lg:text-[40px] xl:text-[50px] lg:leading-[60px] ">
+                                <h3 className="text-mainBlue font-bold	text-start text-3xl lg:text-[30px] xl:text-[40px] 2xl:text-[50px] lg:leading-[36px] xl:leading-[60px] ">
                                     {s.title}
                                 </h3>
                             </div>

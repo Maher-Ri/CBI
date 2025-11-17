@@ -12,21 +12,25 @@ export default function CustomSwiper() {
   const nextRef = useRef(null);
 
   return (
-    <div className="relative w-full py-10">
+    <div className="relative w-full  min-h-[300px]">
       {/* Custom Prev Button */}
       <button
         ref={prevRef}
-        className="absolute left-[5%] top-1/2 -translate-y-1/2 z-20 border-[2px] border-mainBlue rounded-lg p-5 shadow"
+        className="absolute  left-[5%] top-[90%] md:top-1/2 -translate-y-1/2 z-20 flex items-center justify-center border-[2px] border-mainBlue rounded-lg p-3 md:p-5 shadow bg-gradient-to-tr from-white/0 to-white/0
+     hover:bg-gradient-to-tr hover:from-mainBlue/80 hover:via-gray hover:to-[#555]
+    transition-all duration-300 "
       >
-        <img src={arrowLeft} alt="<" />
+        <img src={arrowLeft} alt="<" className="w-[12px] md:w-[16px]"/>
       </button>
 
       {/* Custom Next Button */}
       <button
         ref={nextRef}
-        className="absolute right-[5%] top-1/2 -translate-y-1/2 z-20 border-[2px] border-mainBlue rounded-lg p-5 shadow"
+        className="absolute right-[5%] top-[90%] md:top-1/2 -translate-y-1/2 z-20 flex items-center justify-center border-[2px] border-mainBlue rounded-lg p-3 md:p-5 shadow bg-gradient-to-tr from-white/0 to-white/0
+    hover:bg-gradient-to-tr hover:from-mainBlue/80 hover:via-[gray] hover:to-[#555]
+    transition-all duration-300"
       >
-        <img src={arrowRight} alt=">" />
+        <img src={arrowRight} alt=">" className="w-[12px] md:w-[16px]"/>
       </button>
 
       <Swiper
@@ -47,51 +51,51 @@ export default function CustomSwiper() {
         spaceBetween={20}
         slidesPerView={1}
       >
-        <SwiperSlide>
+        <SwiperSlide className="h-full">
           <div className="relative w-full h-full text-left">
-            <img src={img} alt="Slide" className="w-full h-full object-cover" />
+            <img src={img} alt="Slide" className=" h-[400px] md:w-full md:h-auto  object-none md:object-cover" />
 
             <div className="absolute inset-0 flex flex-col items-start justify-center text-mainBlue gap-8 px-[15%]">
-              <h2 className="text-2xl lg:text-[57px] lg:leading-[70px] font-extrabold">
+              <h2 className=" text-xl md:text-2xl lg:text-[57px] lg:leading-[70px] font-extrabold">
                 MARKET TREND ANALYSIS
                 <br />
                 <span className="font-medium">FOR A RETAIL LEADER</span>
               </h2>
-              <p className="text-base md:text-3xl max-w-[70%]">
+              <p className="text-base md:text-xl lg:text-3xl md:max-w-[70%]">
                 Comprehensive market analysis helping identify growth
                 opportunities and consumer behavior patterns.
               </p>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="h-full">
           <div className="relative w-full h-full text-left">
-            <img src={img} alt="Slide" className="w-full h-full object-cover" />
+            <img src={img} alt="Slide" className=" h-[400px] md:w-full md:h-auto  object-none md:object-cover" />
 
             <div className="absolute inset-0 flex flex-col items-start justify-center text-mainBlue gap-8 px-[15%]">
-              <h2 className="text-2xl lg:text-[57px] lg:leading-[70px] font-extrabold">
-                NOUS TRANSFORMONS VOTRE DATA
+              <h2 className=" text-xl md:text-2xl lg:text-[57px] lg:leading-[70px] font-extrabold">
+                MARKET TREND ANALYSIS
                 <br />
-                <span className="font-medium">EN LEVIER DE CROISSANCE</span>
+                <span className="font-medium">FOR A RETAIL LEADER</span>
               </h2>
-              <p className="text-base md:text-3xl">
+              <p className="text-base md:text-xl lg:text-3xl md:max-w-[70%]">
                 Comprehensive market analysis helping identify growth
                 opportunities and consumer behavior patterns.
               </p>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="h-full">
           <div className="relative w-full h-full text-left">
-            <img src={img} alt="Slide" className="w-full h-full object-cover" />
+            <img src={img} alt="Slide" className=" h-[400px] md:w-full md:h-auto  object-none md:object-cover" />
 
             <div className="absolute inset-0 flex flex-col items-start justify-center text-mainBlue gap-8 px-[15%]">
-              <h2 className="text-2xl lg:text-[57px] lg:leading-[70px] font-extrabold">
-                NOUS TRANSFORMONS VOTRE DATA
+              <h2 className=" text-xl md:text-2xl lg:text-[57px] lg:leading-[70px] font-extrabold">
+                MARKET TREND ANALYSIS
                 <br />
-                <span className="font-medium">EN LEVIER DE CROISSANCE</span>
+                <span className="font-medium">FOR A RETAIL LEADER</span>
               </h2>
-              <p className="text-base md:text-3xl">
+              <p className="text-base md:text-xl lg:text-3xl md:max-w-[70%]">
                 Comprehensive market analysis helping identify growth
                 opportunities and consumer behavior patterns.
               </p>

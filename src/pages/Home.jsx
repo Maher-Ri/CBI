@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Hero from "../components/home/Hero";
 import Services from "../components/home/Services";
 import SwiperSection from "../components/home/Swiper";
+import Footer from "../components/layout/Footer";
 
 export default function Home() {
     useEffect(() => {
@@ -54,11 +55,7 @@ export default function Home() {
                 </section>
             </main>
 
-            <footer id="contact" className="border-t border-gray-200 py-4 text-center text-sm">
-                <div className="max-w-[1100px] mx-auto">
-                    <p className="m-0">© {new Date().getFullYear()} CBI Project</p>
-                </div>
-            </footer>
+<Footer />
         </div>
     );
 }

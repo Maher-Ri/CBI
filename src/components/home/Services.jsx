@@ -6,18 +6,21 @@ const services = [
     {
         id: 1,
         title: "ANALYSE DE DONNEES",
+        description:"transformer les données brutes en informations exploitables",
         url: "https://example.com/design",
         image: service1,
     },
     {
         id: 2,
         title: "CONSIEL",
+        description:"Accompagner les entreprises avec des stratégies sur mesure",
         url: "https://example.com/development",
         image: service2,
     },
     {
         id: 3,
         title: "RAPPORTS",
+        description:"Accompagner les entreprises avec des stratégies sur mesure",
         url: "https://example.com/marketing",
         image: service3,
     },
@@ -35,7 +38,7 @@ export default function Services() {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label={s.title}
-                            className="group relative overflow-hidden rounded-2xl bg-white border-2 border-white transform transition duration-300 hover:scale-[1.03]"
+                            className="group relative overflow-hidden rounded-2xl bg-white border-2 border-white transform transition duration-300 hover:scale-[1.01]"
                         >
                             {/* image as an <img> */}
                             <img
@@ -46,13 +49,14 @@ export default function Services() {
                             />
 
                             {/* dark overlay */}
-                            <div className="absolute inset-0 group-hover:bg-mainBlue/10 transition-colors"></div>
+                            {/* <div className="absolute inset-0 group-hover:bg-white/50 transition-colors"></div> */}
 
                             {/* title absolute */}
-                            <div className="absolute bottom-12 left-8 z-10">
-                                <h3 className="text-mainBlue font-bold	text-start text-3xl lg:text-[30px] xl:text-[40px] 2xl:text-[50px] lg:leading-[36px] xl:leading-[60px] ">
+                            <div className="absolute bottom-8 left-[5%] z-10 text-mainBlue text-start w-[90%]">
+                                <h3 className=" font-bold text-3xl lg:text-[30px] xl:text-[40px] 2xl:text-[50px] lg:leading-[36px] xl:leading-[60px] transition-all duration-500">
                                     {s.title}
                                 </h3>
+                                <p className="h-[0px] transform translate-y-[100%] overflow-hidden opacity-0 text-xl lg:text-3xl group-hover:h-auto group-hover:opacity-100 group-hover:translate-y-[0%] transition-all duration-500">{s.description}</p>
                             </div>
                              </a>
                     ))}

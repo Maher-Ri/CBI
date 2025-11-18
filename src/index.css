@@ -22,7 +22,50 @@ code {
 .hero-section {
   background-image: url("./assets/hero-cover.png");
 }
+.clients-section {
+  background-image: url("./assets/Clients-cover.png");
+}
 
-.btn-primary {
-background-color: ;
+.my-gradient-box {
+  position: relative;
+  overflow: hidden;
+}
+.my-gradient-box > * {
+  position: relative;
+  z-index: 2;
+}
+.my-gradient-box2 > * {
+  position: relative;
+  z-index: 2;
+}
+.my-gradient-box::before,
+.my-gradient-box2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    30deg,
+    rgb(44, 62, 80, 1) 0%,
+    rgb(141, 142, 143, 1) 45%,
+    rgb(141, 142, 143, 1) 50%,
+    rgb(141, 142, 143, 1) 55%,
+    rgb(34, 34, 34, 1) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.my-gradient-box:hover::before,
+.my-gradient-box2:hover::before {
+  opacity: 1;
+    background: linear-gradient(
+    60deg,
+    rgb(44, 62, 80, 1) 0%,
+    rgb(141, 142, 143, 1) 45%,
+    rgb(141, 142, 143, 1) 50%,
+    rgb(141, 142, 143, 1) 55%,
+    rgb(34, 34, 34, 1) 100%
+  );
 }

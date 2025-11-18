@@ -25,8 +25,8 @@ const services = [
 
 export default function Services() {
     return (
-        <section className="py-32">
-            <div className="max-w-[90%] mx-auto">
+        <section className="py-16 lg:py-32">
+            <div className="w-full px-[5%]">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
                     {services.map((s) => (
                         <a

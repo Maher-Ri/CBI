@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
-    <section className="hero-section w-full h-screen  p-8 flex flex-col items-start justify-end bg-cover bg-top bg-no-repeat">
-      <div className="text-start text-white lg:pl-[200px] max-w-[1000px] flex flex-col items-start justify-start gap-8 lg:gap-12 pb-16 md:pb-0">
+    <section className="hero-section w-full h-screen px-[5%] lg:px-0 pb-16 flex flex-col items-start justify-end bg-cover bg-top bg-no-repeat">
+      <div className="text-start text-white lg:pl-[15%] lg:max-w-[1000px] flex flex-col items-start justify-start gap-8 lg:gap-8">
         <h1 className="text-2xl lg:text-[57px] lg:leading-[57px] font-extrabold">
           NOUS TRANSFORMONS VOTRE DATA
           <br />

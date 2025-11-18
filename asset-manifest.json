@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/CBI/static/css/main.f869f2f1.css",
+    "main.js": "/CBI/static/js/main.a37be1ce.js",
+    "static/js/453.d063cd19.chunk.js": "/CBI/static/js/453.d063cd19.chunk.js",
+    "static/media/hero-cover.png": "/CBI/static/media/hero-cover.bda498ad0033c78917fb.png",
+    "static/media/slide1.png": "/CBI/static/media/slide1.719c2e99938e6195cfc8.png",
+    "static/media/Clients-cover.png": "/CBI/static/media/Clients-cover.fa448aa5e815446e0de4.png",
+    "static/media/consiel.png": "/CBI/static/media/consiel.1fe210f3ae3c439b8130.png",
+    "static/media/rapports.png": "/CBI/static/media/rapports.fb6f1836f81dd4a34aa9.png",
+    "static/media/analise.png": "/CBI/static/media/analise.64c996bc8d502b7b198d.png",
+    "static/media/Logo.svg": "/CBI/static/media/Logo.6c74302e42cf42de05d2d01d53483153.svg",
+    "static/media/logo.svg": "/CBI/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/contact-us.svg": "/CBI/static/media/contact-us.4025a58e66fc3ea90cbfc6f69d10dae5.svg",
+    "index.html": "/CBI/index.html",
+    "static/media/arrow-right-blue.svg": "/CBI/static/media/arrow-right-blue.90261d785bd401054111385fbcc7847d.svg",
+    "static/media/arrow-right-white.svg": "/CBI/static/media/arrow-right-white.c2a4d1f31e79f3312930f3ab3a351c17.svg",
+    "static/media/arrow-left-blue.svg": "/CBI/static/media/arrow-left-blue.9f22a903cbb1b4385887111b1d24edf4.svg",
+    "static/media/arrow-left-white.svg": "/CBI/static/media/arrow-left-white.88d8d6707c78e9d0e90cfa46581ebd6f.svg",
+    "static/media/business-logo.svg": "/CBI/static/media/business-logo.44af988972b7a2ea1f62719c4978ebae.svg",
+    "main.f869f2f1.css.map": "/CBI/static/css/main.f869f2f1.css.map",
+    "main.a37be1ce.js.map": "/CBI/static/js/main.a37be1ce.js.map",
+    "453.d063cd19.chunk.js.map": "/CBI/static/js/453.d063cd19.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f869f2f1.css",
+    "static/js/main.a37be1ce.js"
+  ]
+}

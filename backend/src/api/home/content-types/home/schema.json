@@ -17,7 +17,8 @@
         "shared.hero",
         "shared.services",
         "shared.clients",
-        "shared.seo"
+        "shared.seo",
+        "shared.slider"
       ]
     }
   }

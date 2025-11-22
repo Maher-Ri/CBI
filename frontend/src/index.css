@@ -19,9 +19,6 @@ code {
     monospace;
 }
 /* START HOME PAGE STYLINGS */
-.hero-section {
-  background-image: url("./assets/hero-cover.png");
-}
 .clients-section {
   background-image: url("./assets/Clients-cover.png");
 }

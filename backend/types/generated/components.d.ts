@@ -7,6 +7,8 @@ export interface SharedClients extends Struct.ComponentSchema {
     icon: 'bold';
   };
   attributes: {
+    bgImage: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
     clients: Schema.Attribute.Relation<'oneToMany', 'api::client.client'>;
     subtitle: Schema.Attribute.Text &
       Schema.Attribute.Required &
@@ -73,11 +75,11 @@ export interface SharedSlider extends Struct.ComponentSchema {
   collectionName: 'components_shared_sliders';
   info: {
     description: '';
-    displayName: 'Slider';
-    icon: 'address-book';
+    displayName: 'slider';
+    icon: 'slideshow';
   };
   attributes: {
-    files: Schema.Attribute.Media<'images', true>;
+    slides: Schema.Attribute.Relation<'oneToMany', 'api::slide.slide'>;
   };
 }
 

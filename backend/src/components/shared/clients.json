@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_clients",
+  "info": {
+    "displayName": "clients",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "subtitle": {
+      "type": "text",
+      "required": true,
+      "unique": true
+    },
+    "clients": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::client.client"
+    }
+  },
+  "config": {}
+}

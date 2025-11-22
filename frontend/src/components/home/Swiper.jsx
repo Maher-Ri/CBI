@@ -1,13 +1,15 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 
 import "swiper/css"; // ONLY this one!
 
-import img from "../../assets/slide1.png";
 import arrowLeft from "../../assets/arrow-left-blue.svg";
 import arrowRight from "../../assets/arrow-right-blue.svg";
-export default function CustomSwiper() {
+
+export default function SwiperSection(data) {
+  const base = process.env.REACT_APP_STRAPI_URL;
+  const swiperData = data.data.slides;
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
@@ -47,69 +49,28 @@ export default function CustomSwiper() {
         spaceBetween={20}
         slidesPerView={1}
       >
-        <SwiperSlide className="h-full">
+        {swiperData.map((slide) => (
+        <SwiperSlide className="h-full" key={slide.id}>
           <div className="relative w-full h-full text-left ">
             <img
-              src={img}
-              alt="Slide"
-              className=" h-[400px] md:w-full md:h-auto  object-none md:object-cover"
+              src={`${base}${slide.image.url}`}
+              alt={slide.title}
+              className=" h-[400px] w-full md:h-[600px] 2xl:h-auto object-none md:object-cover"
             />
 
             <div className="absolute inset-0 flex flex-col items-start justify-center text-mainBlue gap-8 px-[15%]">
               <h2 className=" text-xl md:text-2xl lg:text-[57px] lg:leading-[70px] font-extrabold">
-                MARKET TREND ANALYSIS
+                {slide.title}
                 <br />
-                <span className="font-medium">FOR A RETAIL LEADER</span>
+                <span className="font-medium">{slide.subtitle}</span>
               </h2>
               <p className="text-base md:text-xl lg:text-3xl md:max-w-[70%]">
-                Comprehensive market analysis helping identify growth
-                opportunities and consumer behavior patterns.
+                {slide.description}
               </p>
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="h-full">
-          <div className="relative w-full h-full text-left">
-            <img
-              src={img}
-              alt="Slide"
-              className=" h-[400px] md:w-full md:h-auto  object-none md:object-cover"
-            />
-
-            <div className="absolute inset-0 flex flex-col items-start justify-center text-mainBlue gap-8 px-[15%]">
-              <h2 className=" text-xl md:text-2xl lg:text-[57px] lg:leading-[70px] font-extrabold">
-                MARKET TREND ANALYSIS
-                <br />
-                <span className="font-medium">FOR A RETAIL LEADER</span>
-              </h2>
-              <p className="text-base md:text-xl lg:text-3xl md:max-w-[70%]">
-                Comprehensive market analysis helping identify growth
-                opportunities and consumer behavior patterns.
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="h-full">
-          <div className="relative w-full h-full text-left">
-            <img
-              src={img}
-              alt="Slide"
-              className=" h-[400px] md:w-full md:h-auto  object-none md:object-cover"
-            />
-
-            <div className="absolute inset-0 flex flex-col items-start justify-center text-mainBlue gap-8 px-[15%]">
-              <h2 className=" text-xl md:text-2xl lg:text-[57px] lg:leading-[70px] font-extrabold">
-                MARKET TREND ANALYSIS
-                <br />
-                <span className="font-medium">FOR A RETAIL LEADER</span>
-              </h2>
-              <p className="text-base md:text-xl lg:text-3xl md:max-w-[70%]">
-                Comprehensive market analysis helping identify growth
-                opportunities and consumer behavior patterns.
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

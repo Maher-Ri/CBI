@@ -1,10 +1,15 @@
 {
-  "collectionName": "components_shared_clients",
+  "kind": "collectionType",
+  "collectionName": "slides",
   "info": {
-    "displayName": "clients",
-    "icon": "bold"
+    "singularName": "slide",
+    "pluralName": "slides",
+    "displayName": "slide"
   },
-  "options": {},
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
   "attributes": {
     "title": {
       "type": "string",
@@ -12,24 +17,20 @@
       "unique": true
     },
     "subtitle": {
-      "type": "text",
+      "type": "string",
       "required": true,
       "unique": true
     },
-    "clients": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::client.client"
+    "description": {
+      "type": "text"
     },
-    "bgImage": {
+    "image": {
       "type": "media",
       "multiple": false,
-      "required": true,
       "allowedTypes": [
         "images",
         "files"
       ]
     }
-  },
-  "config": {}
+  }
 }

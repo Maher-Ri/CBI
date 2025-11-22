@@ -2,21 +2,45 @@ import React, { useEffect } from "react";
 import Hero from "../components/home/Hero";
 import Services from "../components/home/Services";
 import SwiperSection from "../components/home/Swiper";
-import Footer from "../components/layout/Footer";
 import Clients from "../components/home/Clients";
 
+import UseAxios from "../components/hooks/UseAxios";
+import Loading from "../components/layout//Loading";
+import Error from "../components/layout//Error";
+
 export default function Home() {
-  useEffect(() => {
-    document.title = "Home • CBI Project";
-  }, []);
+  const base = process.env.REACT_APP_STRAPI_URL;
+  const { loading, error, data } = UseAxios(`${base}/api/home`);
+  if (loading) return <Loading />;
+  if (error) return <Error />;
+
+  // useEffect(() => {
+  //   document.title = "Home • CBI Project";
+  // }, []);
 
   return (
     <div className="home-page font-sans text-gray-900 leading-relaxed bg-mainBlue">
-      <Hero />
-      <Services />
-      <SwiperSection />
-      <Clients />
-      <Footer />
+      {data.sections?.map((section, index) => {
+        switch (section.__component) {
+          // case "shared.seo":
+          //   return <Seo key={index} data={section.seo} />;
+
+          case "shared.hero":
+            return <Hero key={index} data={section} />;
+
+          case "shared.services":
+            return <Services key={index} data={section} />;
+
+          case "shared.slider":
+            return <SwiperSection key={index} data={section} />;
+
+          case "shared.clients":
+            return <Clients key={index} data={section} />;
+
+          default:
+            return null;
+        }
+      })}
     </div>
   );
 }

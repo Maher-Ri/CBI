@@ -1,22 +1,27 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay,Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 
-import "swiper/css"; // ONLY this one!
-import business from "../../assets/business-logo.svg";
+import "swiper/css";
+
 import arrowLeft from "../../assets/arrow-left-white.svg";
 import arrowRight from "../../assets/arrow-right-white.svg";
 import { Link } from "react-router-dom";
-export default function Clients() {
+
+export default function Clients(data) {
+  const clientsData = data.data;
+  const base = process.env.REACT_APP_STRAPI_URL;
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
   return (
-    <div className="relative w-full py-16 lg:py-24 bg-cover bg-center bg-no-repeat clients-section">
+    <section
+    style={{ backgroundImage: `url(${base}${clientsData.bgImage.url})` }}
+    className="relative w-full py-16 lg:py-24 bg-cover bg-center bg-no-repeat">
       <div className="text-white px-[5%] lg:px-[15%] text-start">
         <div className="flex flex-row items-end justify-start gap-4 md:gap-6">
           <h2 className="text-2xl lg:text-[57px] lg:leading-[57px] font-extrabold flex-shrink-0">
-            Clients
+            {clientsData.title}
           </h2>
           <p className="border-b-2 border-white w-full flex-grow mb-[4px]"></p>
           {/* Custom Prev Button */}
@@ -36,13 +41,12 @@ export default function Clients() {
           </button>
         </div>
         <p className="text-lg md:text-3xl w-full xl:w-[60%] my-8">
-          Nous travaillons en partenariat avec plus 20 clients, dont 15 marques
-          internationales
+          {clientsData.subtitle}
         </p>
       </div>
       <div className="ml-[5%] lg:ml-[15%]">
         <Swiper
-          modules={[Autoplay,Navigation]}
+          modules={[Autoplay, Navigation]}
           navigation={false}
           loop={true}
           autoplay={{
@@ -68,63 +72,25 @@ export default function Clients() {
             },
           }}
         >
-          <SwiperSlide className="h-full">
-            <Link
-              to="#"
-              className="inset-0 flex flex-col items-center justify-center text-white gap-4 border-2 border-white rounded-2xl px-4 py-8 sm:py-16 my-gradient-box"
-            >
-              <img src={business} alt="Business Logo" className="w-[46px]" />
-              <h3 className=" text-xl md:text-2xl lg:text-3xl font-bold">
-                Business Name
-              </h3>
-            </Link>
-          </SwiperSlide>
-          <SwiperSlide className="h-full">
-            <Link
-              to="#"
-              className="inset-0 flex flex-col items-center justify-center text-white gap-4 border-2 border-white rounded-2xl px-4 py-8 sm:py-16 my-gradient-box"
-            >
-              <img src={business} alt="Business Logo" className="w-[46px]" />
-              <h3 className=" text-xl md:text-2xl lg:text-3xl font-bold">
-                Business Name
-              </h3>
-            </Link>
-          </SwiperSlide>
-          <SwiperSlide className="h-full">
-            <Link
-              to="#"
-              className="inset-0 flex flex-col items-center justify-center text-white gap-4 border-2 border-white rounded-2xl px-4 py-8 sm:py-16 my-gradient-box"
-            >
-              <img src={business} alt="Business Logo" className="w-[46px]" />
-              <h3 className=" text-xl md:text-2xl lg:text-3xl font-bold">
-                Business Name
-              </h3>
-            </Link>
-          </SwiperSlide>
-          <SwiperSlide className="h-full">
-            <Link
-              to="#"
-              className="inset-0 flex flex-col items-center justify-center text-white gap-4 border-2 border-white rounded-2xl px-4 py-8 sm:py-16 my-gradient-box"
-            >
-              <img src={business} alt="Business Logo" className="w-[46px]" />
-              <h3 className=" text-xl md:text-2xl lg:text-3xl font-bold">
-                Business Name
-              </h3>
-            </Link>
-          </SwiperSlide>
-          <SwiperSlide className="h-full">
-            <Link
-              to="#"
-              className="inset-0 flex flex-col items-center justify-center text-white gap-4 border-2 border-white rounded-2xl px-4 py-8 sm:py-16 my-gradient-box"
-            >
-              <img src={business} alt="Business Logo" className="w-[46px]" />
-              <h3 className=" text-xl md:text-2xl lg:text-3xl font-bold">
-                Business Name
-              </h3>
-            </Link>
-          </SwiperSlide>
+          {clientsData.clients.map((client) => (
+            <SwiperSlide className="h-full" key={client.id}>
+              <Link
+                to="#"
+                className="inset-0 flex flex-col items-center justify-center text-white gap-4 border-2 border-white rounded-2xl px-4 py-8 sm:py-16 my-gradient-box"
+              >
+                <img
+                  src={`${base}${client.image.url}`}
+                  alt={client.title}
+                  className="w-[46px]"
+                />
+                <h3 className=" text-xl md:text-2xl lg:text-3xl font-bold">
+                  {client.title}
+                </h3>
+              </Link>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
-    </div>
+    </section>
   );
 }

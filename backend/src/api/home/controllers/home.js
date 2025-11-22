@@ -18,10 +18,11 @@ module.exports = {
         populate: {
           sections: {
             populate: {
-              // HERO SECTION
+              // direct SECTION images
               image: true,
               images: true,
-              
+              bgImage:true,
+
               // SHARED.CLIENTS SECTION
               clients: {
                 populate: {
@@ -34,6 +35,13 @@ module.exports = {
                 populate: {
                   image: true,
                   icon: true,
+                },
+              },
+
+              // SHARED.SLIDER SECTION
+              slides: {
+                populate: {
+                  image: true,
                 },
               },
             },

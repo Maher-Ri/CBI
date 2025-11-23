@@ -1,5 +1,5 @@
 import logo from "../../assets/Logo.svg";
-import EmailSubscribtion from "../utils/EmailSubscribtion";
+import EmailSubscription from "../utils/EmailSubscription";
 
 
 export default function Footer() {
@@ -43,7 +43,7 @@ export default function Footer() {
           </h3>
 
           {/* Email Input */}
-          <EmailSubscribtion/>
+          <EmailSubscription/>
           <span className="leading-none text-[17px] font-medium text-white/20 ">
             Share your email to get all new and
             <br className="hidden xl:block" />

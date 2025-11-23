@@ -2,19 +2,18 @@ import { useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
 
-export default function EmailSubscribtion() {
+export default function EmailSubscription() {
   const base = process.env.REACT_APP_STRAPI_URL;
   const [email, setEmail] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
 
-  const validateEmail = (email) => {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-  };
+  const handleSubmit = async (e) => {
 
-  const handleSubmit = async () => {
+    e.preventDefault();
     setErrorMsg("");
-    if (!validateEmail(email)) {
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
       setErrorMsg("Please enter a valid email address.");
       return;
     }
@@ -42,7 +41,7 @@ export default function EmailSubscribtion() {
   };
   return (
     <>
-      <div
+      <form onSubmit={handleSubmit}
         className={`flex items-start border-b-2 mb-2 ${
           errorMsg ? "border-red" : "border-white"
         }`}
@@ -56,11 +55,12 @@ export default function EmailSubscribtion() {
         />
         <button
           onClick={handleSubmit}
+          type="submit"
           className="text-gray-300 hover:text-white transition text-[18px] font-medium"
         >
           @
         </button>
-      </div>
+      </form>
       {/* Inline error */}
       {errorMsg && (
         <p className="text-red font-semibold text-sm mb-4">{errorMsg}</p>

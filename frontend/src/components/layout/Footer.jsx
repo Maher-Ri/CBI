@@ -1,5 +1,9 @@
 import logo from "../../assets/Logo.svg";
+import EmailSubscribtion from "../utils/EmailSubscribtion";
+
+
 export default function Footer() {
+  
   return (
     <footer className="bg-mainBlue text-white pt-16 pb-8 ">
       {/* TOP SECTIONS */}
@@ -39,18 +43,11 @@ export default function Footer() {
           </h3>
 
           {/* Email Input */}
-          <div className="flex items-center border-b border-gray-400 pb-6 mb-2">
-            <input
-              type="email"
-              placeholder="Get News & Updates"
-              className="bg-transparent outline-none text-[17px] flex-1 placeholder-white placeholder:text-[17px] font-medium placeholder:font-medium"
-            />
-            <button className="text-gray-300 hover:text-white transition text-[17px] font-medium">
-              @
-            </button>
-          </div>
+          <EmailSubscribtion/>
           <span className="leading-none text-[17px] font-medium text-white/20 ">
-            Share your email to get all new and<br className="hidden xl:block"/>updates related to CBI
+            Share your email to get all new and
+            <br className="hidden xl:block" />
+            updates related to CBI
           </span>
           <ul className="space-y-2 text-[17px] font-medium mt-4">
             <li>CONTACT US</li>

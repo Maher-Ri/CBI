@@ -3,10 +3,16 @@ import Home from "./pages/Home";
 import "./App.css";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
-
+import { Toaster } from "react-hot-toast";
 function App() {
   return (
     <div className="App">
+      <Toaster
+        position="bottom-right"
+        toastOptions={{
+          duration: 5000,
+        }}
+      />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

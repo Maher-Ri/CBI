@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_jobs",
+  "info": {
+    "displayName": "jobs",
+    "icon": "cursor"
+  },
+  "options": {},
+  "attributes": {
+    "jobs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::job.job"
+    }
+  },
+  "config": {}
+}

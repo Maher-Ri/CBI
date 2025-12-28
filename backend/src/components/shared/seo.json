@@ -20,12 +20,19 @@
     },
     "keywords": {
       "type": "text",
-      "default": "CBI"
+      "default": "CBI",
+      "required": true
     },
-    "slug": {
+    "canonicalUrl": {
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "ogTitle": {
+      "type": "string"
+    },
+    "ogDescription": {
+      "type": "text"
     },
     "image": {
       "type": "media",
@@ -35,17 +42,9 @@
         "files"
       ]
     },
-    "canonicalUrl": {
-      "type": "string",
-      "unique": true
-    },
     "robots": {
-      "type": "enumeration",
-      "default": "index, follow",
-      "enum": [
-        "index, follow",
-        "noindex, nofollow"
-      ]
+      "type": "boolean",
+      "default": true
     }
   },
   "config": {}

@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_global_navbars",
+  "info": {
+    "displayName": "navbar",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "links": {
+      "type": "component",
+      "component": "global.link",
+      "repeatable": true,
+      "required": true
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "contact": {
+      "type": "component",
+      "component": "global.contact",
+      "repeatable": false,
+      "required": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_global_links",
+  "info": {
+    "displayName": "link",
+    "icon": "exit"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "url": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "isExternal": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_global_infos",
+  "info": {
+    "displayName": "info",
+    "icon": "globe"
+  },
+  "options": {},
+  "attributes": {
+    "address": {
+      "type": "richtext",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

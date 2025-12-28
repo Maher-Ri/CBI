@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_global_contacts",
+  "info": {
+    "displayName": "contact",
+    "icon": "envelop"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "isExternal": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

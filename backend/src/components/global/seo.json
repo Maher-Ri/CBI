@@ -1,0 +1,72 @@
+{
+  "collectionName": "components_global_seos",
+  "info": {
+    "displayName": "seo",
+    "icon": "chartCircle"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "CBI",
+      "required": true
+    },
+    "siteName": {
+      "type": "string",
+      "default": "CBI",
+      "required": true
+    },
+    "favicon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "description": {
+      "type": "text",
+      "default": "CBI",
+      "required": true
+    },
+    "canonicalUrl": {
+      "type": "string",
+      "default": "/",
+      "required": true
+    },
+    "keywords": {
+      "type": "text",
+      "default": "CBI"
+    },
+    "ogTitle": {
+      "type": "string",
+      "default": "CBI"
+    },
+    "ogDescription": {
+      "type": "string",
+      "default": "CBI"
+    },
+    "ogLocale": {
+      "type": "string",
+      "default": "en_US",
+      "maxLength": 6
+    },
+    "ogImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "robots": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "config": {}
+}

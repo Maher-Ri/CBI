@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "carrieres",
+  "info": {
+    "singularName": "carriere",
+    "pluralName": "carrieres",
+    "displayName": "carriere"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.seo",
+        "shared.jobs"
+      ],
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

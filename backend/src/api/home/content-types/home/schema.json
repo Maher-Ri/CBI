@@ -15,10 +15,10 @@
       "type": "dynamiczone",
       "components": [
         "shared.hero",
-        "shared.services",
         "shared.clients",
         "shared.seo",
-        "shared.slider"
+        "shared.slider",
+        "shared.services"
       ]
     }
   }

@@ -6,6 +6,7 @@ import Footer from "./components/layout/Footer";
 import { Toaster } from "react-hot-toast";
 function App() {
   return (
+    
     <div className="App">
       <Toaster
         position="bottom-right"

@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_global_footers",
+  "info": {
+    "displayName": "footer",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "primaryLinks": {
+      "type": "component",
+      "component": "global.link",
+      "repeatable": true,
+      "required": true
+    },
+    "info": {
+      "type": "component",
+      "component": "global.info",
+      "repeatable": false,
+      "required": true
+    },
+    "secondaryLinks": {
+      "type": "component",
+      "component": "global.link",
+      "repeatable": true,
+      "required": true
+    },
+    "copyright": {
+      "type": "text",
+      "required": true
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

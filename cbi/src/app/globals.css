@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  max-width: 2000px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, var(--font-montserrat),
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: inherit;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+/* Navbar fade in class */
+.fade-in {
+  animation: fadeIn 1s forwards ease-in-out;
+}
+
+/* SATRT CUSTOM LINKS STYLING */
+/* footer lInks */
+.mylink {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  z-index: 2;
+  width: 100%;
+  display: inline-block;
+}
+.mylink::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 14px;
+  top: 50%;
+  left: 0;
+  background-image: url("../../public/assets/arrow-right-yellow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translate(-100%, -50%);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  z-index: 1;
+}
+.mylink:hover {
+  padding-left: 20px;
+}
+.mylink:hover::before {
+  transform: translate(-0%, -50%);
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+}
+/* Navbar Links */
+.active-link::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 14px;
+  top: 50%;
+  left: 0;
+  background-image: url("../../public/assets/arrow-right-yellow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translate(-15px, -50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+  animation: smallfadeLeft 0.3s ease-in-out forwards;
+  animation-delay: 0.3s; /* waits 1 second before starting */
+}
+
+/* herro Btn styles */
+.myBtn {
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  transition: 0.4s ease;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(248, 170, 55, 0.1),
+    gray
+  );
+  z-index: 1;
+}
+
+.myBtn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgb(248, 170, 55) 0%,
+    rgba(255, 255, 255, 0.5) 60%,
+    gray 100%
+  );
+  transition: all 0.5s ease;
+  z-index: 2;
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.myBtn:hover::before {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+/* START HOME PAGE STYLINGS */
+.my-gradient-box {
+  position: relative;
+  overflow: hidden;
+}
+.my-gradient-box > *,
+.my-gradient-box2 > * {
+  position: relative;
+  z-index: 2;
+}
+
+.my-gradient-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    30deg,
+    rgba(248, 170, 55, 0.5) 0%,
+    rgba(88, 103, 117, 0.2) 60%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+.my-gradient-box:hover::before {
+  opacity: 1;
+  background: linear-gradient(
+    60deg,
+    rgba(248, 170, 55, 0.5) 0%,
+    rgba(255, 255, 255, 0.2) 60%,
+    transparent 100%
+  );
+}
+.my-gradient-box2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    30deg,
+    rgba(44, 62, 80,0.9) 0%,
+    rgba(88, 103, 117, 0.5) 40%,
+    transparent 90%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+.my-gradient-box2:hover::before {
+  opacity: 1;
+
+  background: linear-gradient(
+    60deg,
+    rgb(44, 62, 80) 0%,
+    rgba(88, 103, 117, 0.5) 40%,
+    transparent 90%
+  );
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes smallfadeLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-15px, -50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+}
